@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import theme from "../../color"
 import { AuthBox, Title, StyledInput, Text, InputBox } from "./__styled__/Auth"
 import Button from "@material-ui/core/Button"
@@ -13,6 +13,7 @@ const Signup = () => {
   const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
+  const history = useHistory() // react-router-dom hook to go to path when clicking on signup button
 
   const { signup } = useAuth()
 
@@ -27,6 +28,7 @@ const Signup = () => {
       setError("")
       setLoading(true)
       await signup(email, password)
+      history.push("/login")
     } catch {
       setError("Failed to create an account")
     }
@@ -82,7 +84,6 @@ const Signup = () => {
           </Button>
         </InputBox>
       </Form>
-
       <Text>
         Already have an account? <Link to="/login">Login</Link>
       </Text>
