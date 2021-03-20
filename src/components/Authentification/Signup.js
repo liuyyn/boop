@@ -28,7 +28,7 @@ const Signup = () => {
       setError("")
       setLoading(true)
       await signup(email, password)
-      history.push("/login")
+      history.push("/home")
     } catch {
       setError("Failed to create an account")
     }
