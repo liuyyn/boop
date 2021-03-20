@@ -41,17 +41,47 @@ export class MapContainer extends Component {
           name={'Max'}
           time={'Wants to go for a walk'}
           position={{ lat: 45.497280, lng: -73.590549 }}
-        />
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}
-          onClose={this.onClose}
-        >
-          <div>
-            <h4>{this.state.selectedPlace.name}</h4>
-            <h4>{this.state.selectedPlace.time}</h4>
-          </div>
-        </InfoWindow>
+      />
+      <Marker
+          onClick={this.onMarkerClick}
+          name={'Daisy'}
+          time={'Wants play for a few days'}
+          position={{ lat: 45.462292, lng: -73.569222 }}
+      />
+      <Marker
+          onClick={this.onMarkerClick}
+          name={'Archarbar'}
+          time={'Wants to go for a walk'}
+          position={{ lat: 45.513702, lng: -73.596385 }}
+      />
+      <Marker
+          onClick={this.onMarkerClick}
+          name={'Rocket'}
+          time={'Wants to stay for a week'}
+          position={{ lat: 45.488947, lng: -73.626192 }}
+      />
+      <Marker
+          onClick={this.onMarkerClick}
+          name={'Saba'}
+          time={'Wants to sleep for a few hours'}
+          position={{ lat: 45.505839, lng: -73.571646 }}
+      />
+      <Marker
+          onClick={this.onMarkerClick}
+          name={'Bella'}
+          time={'Wants to play for a few hours'}
+          position={{ lat: 45.456422, lng: -73.571233 }}
+      />
+      <InfoWindow
+        marker={this.state.activeMarker}
+        visible={this.state.showingInfoWindow}
+        onClose={this.onClose}
+      >
+        <div>
+          <h4>{this.state.selectedPlace.name}</h4>
+          <h4>{this.state.selectedPlace.time}</h4>
+        </div>
+      </InfoWindow>
       </Map>
     )
   }
