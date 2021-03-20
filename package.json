@@ -9,7 +9,6 @@
     "@material-ui/styles": "^4.11.3",
     "axios": "^0.21.1",
     "firebase": "^8.3.1",
-    "google-maps-react": "^2.0.6",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
