@@ -40,8 +40,8 @@ export class MapContainer extends Component {
         {this.state.book && (
           <Alert severity={"success"} style={{ margin: "20px" }}>
             <AlertTitle>Success !</AlertTitle>
-            You have successfully <strong>BOOPED</strong> some quality time with
-            this pet - <strong>Congrats e!</strong>
+            You have successfully <strong>BOOPED</strong> some quality time with 
+            {this.state.selectedPlace.name} - <strong>Thank you!</strong>
           </Alert>
         )}
         <Map
