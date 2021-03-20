@@ -28,7 +28,7 @@ export class MapContainer extends Component {
   render() {
     return (
       <Map
-        google={props.google}
+        google={this.props.google}
         zoom={14}
         styles={{ width: "50%", height: "50%", padding: "1000px" }}
         initialCenter={{
