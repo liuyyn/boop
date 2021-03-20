@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import theme from "../../color"
 import { AuthBox, Title, StyledInput, Text, InputBox } from "./__styled__/Auth"
-import { Button, Box } from "@material-ui/core"
+import { Button } from "@material-ui/core"
 import { useAuth } from "../../context/AuthContent"
 import { Form } from "reactstrap"
 import Alert from "@material-ui/lab/Alert"
@@ -12,8 +12,9 @@ const Login = () => {
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
+  const history = useHistory()
 
-  const { signup } = useAuth()
+  const { login } = useAuth()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -21,7 +22,8 @@ const Login = () => {
     try {
       setError("")
       setLoading(true)
-      await signup(email, password)
+      await login(email, password)
+      history.push("/home")
     } catch {
       setError("Failed to sign in")
     }
