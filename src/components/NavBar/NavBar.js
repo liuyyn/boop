@@ -26,7 +26,7 @@ const NavBar = () => {
       <Toolbar style={{ maxWidth: "100%" }}>
         <Title>BOOP</Title>
 
-        <StyledLink role="link" to="/">
+        <StyledLink role="link" to="/home">
           <StyledButton>Home</StyledButton>
         </StyledLink>
 
