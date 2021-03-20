@@ -24,3 +24,8 @@ export const SearchContainer = styled.div`
     color: #ff744e;
   }
 `
+
+export const MapContainer = styled.div`
+  /* display: block; */
+  padding: 50px;
+`
