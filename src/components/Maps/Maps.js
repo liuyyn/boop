@@ -8,8 +8,8 @@ const MapContainer = (props) => (
     zoom={14}
     styles={{ width: "50%", height: "50%", padding: "1000px" }}
     initialCenter={{
-      lat: -1.2884,
-      lng: 36.8233,
+      lat: 45.497280,
+      lng: -73.590549,
     }}
   />
 )
